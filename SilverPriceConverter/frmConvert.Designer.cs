@@ -133,19 +133,19 @@
             this.退出ToolStripMenuItem});
             this.cmsNotice.Name = "cmsNotice";
             this.cmsNotice.ShowImageMargin = false;
-            this.cmsNotice.Size = new System.Drawing.Size(103, 48);
+            this.cmsNotice.Size = new System.Drawing.Size(105, 48);
             // 
             // 显示ToolStripMenuItem
             // 
             this.显示ToolStripMenuItem.Name = "显示ToolStripMenuItem";
-            this.显示ToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.显示ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.显示ToolStripMenuItem.Text = "显示/隐藏";
             this.显示ToolStripMenuItem.Click += new System.EventHandler(this.显示ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -230,6 +230,7 @@
             this.Controls.Add(this.txtExchangeRate);
             this.Controls.Add(this.btnConvert);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
