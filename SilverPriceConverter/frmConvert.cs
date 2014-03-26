@@ -39,6 +39,8 @@ namespace SilverPriceConverter
 
                         txtRMB.Text = PriceConverter.Convert(double.Parse(txtUSD.Text),
                             double.Parse(txtExchangeRate.Text)).ToString();
+
+                        Log(txtUSD.Text + "  " + txtRMB.Text);
                     }
                 }
 
@@ -345,13 +347,31 @@ namespace SilverPriceConverter
             if (!this.Visible)
             {
                 this.Show();
+                this.WindowState = FormWindowState.Normal;
             }
 
             else
             {
                 this.Hide();
             }
+        }
 
+        private delegate void InvokeLog(string logtxt);
+
+        private void Log(string logtxt)
+        {
+            InvokeLog invokeLog = new InvokeLog(Log);
+
+            if (this.txtHistory.InvokeRequired)
+            {
+                invokeLog.Invoke(logtxt);
+            }
+
+            else
+            {
+                txtHistory.AppendText(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss ")
+                    + logtxt + System.Environment.NewLine);
+            }
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -370,7 +390,7 @@ namespace SilverPriceConverter
             //窗体恢复正常时  
             if (this.WindowState == FormWindowState.Normal)
             {
-
+                //this.Show();
             }
         }
 
@@ -395,6 +415,8 @@ namespace SilverPriceConverter
                 else
                 {
                     this.Show();
+                    this.WindowState = FormWindowState.Normal;
+                    //this.ResumeLayout();
                 }
             }
         }
