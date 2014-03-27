@@ -111,7 +111,6 @@
             // groupPanel1
             // 
             this.groupPanel1.BackColor = System.Drawing.Color.White;
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1.Controls.Add(this.cbxAuto);
             this.groupPanel1.Controls.Add(this.txtUSD);
@@ -161,7 +160,7 @@
             // cbxAuto
             // 
             this.cbxAuto.AutoSize = true;
-            this.cbxAuto.BackColor = System.Drawing.Color.White;
+            this.cbxAuto.BackColor = System.Drawing.Color.Transparent;
             this.cbxAuto.Checked = true;
             this.cbxAuto.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbxAuto.ForeColor = System.Drawing.Color.Black;
@@ -206,7 +205,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(320, 13);
             this.label3.Name = "label3";
@@ -217,7 +216,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(32, 12);
             this.label2.Name = "label2";
@@ -228,7 +227,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(158, 13);
             this.label1.Name = "label1";
@@ -300,7 +299,7 @@
             this.superTabControl1.Name = "superTabControl1";
             this.superTabControl1.ReorderTabsEnabled = true;
             this.superTabControl1.SelectedTabFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
-            this.superTabControl1.SelectedTabIndex = 2;
+            this.superTabControl1.SelectedTabIndex = 0;
             this.superTabControl1.Size = new System.Drawing.Size(452, 279);
             this.superTabControl1.TabFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.superTabControl1.TabIndex = 14;
@@ -393,9 +392,9 @@
             this.superTabControlPanel3.Controls.Add(this.chartGoldETF);
             this.superTabControlPanel3.Controls.Add(this.GridGoldETF);
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 26);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(452, 279);
+            this.superTabControlPanel3.Size = new System.Drawing.Size(452, 253);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.ETF;
             // 
@@ -410,7 +409,7 @@
             this.chartGoldETF.ForeColor = System.Drawing.Color.Black;
             this.chartGoldETF.Location = new System.Drawing.Point(0, 151);
             this.chartGoldETF.Name = "chartGoldETF";
-            this.chartGoldETF.Size = new System.Drawing.Size(452, 128);
+            this.chartGoldETF.Size = new System.Drawing.Size(452, 102);
             this.chartGoldETF.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chartGoldETF.TabIndex = 10;
             this.chartGoldETF.Text = "microChart2";
@@ -439,9 +438,9 @@
             this.superTabControlPanel4.Controls.Add(this.chartSilverETF);
             this.superTabControlPanel4.Controls.Add(this.gridSiverETF);
             this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 26);
             this.superTabControlPanel4.Name = "superTabControlPanel4";
-            this.superTabControlPanel4.Size = new System.Drawing.Size(452, 279);
+            this.superTabControlPanel4.Size = new System.Drawing.Size(452, 253);
             this.superTabControlPanel4.TabIndex = 0;
             this.superTabControlPanel4.TabItem = this.superTabItem3;
             // 
