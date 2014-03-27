@@ -369,7 +369,7 @@ namespace SilverPriceConverter
 
             else
             {
-                txtHistory.AppendText(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss ")
+                txtHistory.AppendText(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ")
                     + logtxt + System.Environment.NewLine);
             }
         }
