@@ -36,6 +36,7 @@
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.cbxGoAgent = new System.Windows.Forms.CheckBox();
             this.cbxAuto = new System.Windows.Forms.CheckBox();
             this.txtUSD = new System.Windows.Forms.NumericUpDown();
             this.lblDate = new System.Windows.Forms.Label();
@@ -87,19 +88,19 @@
             this.退出ToolStripMenuItem});
             this.cmsNotice.Name = "cmsNotice";
             this.cmsNotice.ShowImageMargin = false;
-            this.cmsNotice.Size = new System.Drawing.Size(103, 48);
+            this.cmsNotice.Size = new System.Drawing.Size(105, 48);
             // 
             // 显示ToolStripMenuItem
             // 
             this.显示ToolStripMenuItem.Name = "显示ToolStripMenuItem";
-            this.显示ToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.显示ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.显示ToolStripMenuItem.Text = "显示/隐藏";
             this.显示ToolStripMenuItem.Click += new System.EventHandler(this.显示ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -112,6 +113,7 @@
             // 
             this.groupPanel1.BackColor = System.Drawing.Color.White;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.cbxGoAgent);
             this.groupPanel1.Controls.Add(this.cbxAuto);
             this.groupPanel1.Controls.Add(this.txtUSD);
             this.groupPanel1.Controls.Add(this.lblDate);
@@ -156,6 +158,19 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 13;
             this.groupPanel1.Text = "换算";
+            // 
+            // cbxGoAgent
+            // 
+            this.cbxGoAgent.AutoSize = true;
+            this.cbxGoAgent.BackColor = System.Drawing.Color.Transparent;
+            this.cbxGoAgent.ForeColor = System.Drawing.Color.Black;
+            this.cbxGoAgent.Location = new System.Drawing.Point(88, 50);
+            this.cbxGoAgent.Name = "cbxGoAgent";
+            this.cbxGoAgent.Size = new System.Drawing.Size(66, 16);
+            this.cbxGoAgent.TabIndex = 19;
+            this.cbxGoAgent.Text = "goAgent";
+            this.cbxGoAgent.UseVisualStyleBackColor = false;
+            this.cbxGoAgent.CheckedChanged += new System.EventHandler(this.cbxGoAgent_CheckedChanged);
             // 
             // cbxAuto
             // 
@@ -346,9 +361,9 @@
             this.superTabControlPanel1.Controls.Add(this.chartExchangeRate);
             this.superTabControlPanel1.Controls.Add(this.gridExchangeRate);
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 26);
+            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(452, 253);
+            this.superTabControlPanel1.Size = new System.Drawing.Size(452, 279);
             this.superTabControlPanel1.TabIndex = 1;
             this.superTabControlPanel1.TabItem = this.superTabItem1;
             // 
@@ -363,7 +378,7 @@
             this.chartExchangeRate.ForeColor = System.Drawing.Color.Black;
             this.chartExchangeRate.Location = new System.Drawing.Point(0, 151);
             this.chartExchangeRate.Name = "chartExchangeRate";
-            this.chartExchangeRate.Size = new System.Drawing.Size(452, 102);
+            this.chartExchangeRate.Size = new System.Drawing.Size(452, 128);
             this.chartExchangeRate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chartExchangeRate.TabIndex = 12;
             this.chartExchangeRate.Text = "microChart1";
@@ -392,9 +407,9 @@
             this.superTabControlPanel3.Controls.Add(this.chartGoldETF);
             this.superTabControlPanel3.Controls.Add(this.GridGoldETF);
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 26);
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(452, 253);
+            this.superTabControlPanel3.Size = new System.Drawing.Size(452, 279);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.ETF;
             // 
@@ -409,7 +424,7 @@
             this.chartGoldETF.ForeColor = System.Drawing.Color.Black;
             this.chartGoldETF.Location = new System.Drawing.Point(0, 151);
             this.chartGoldETF.Name = "chartGoldETF";
-            this.chartGoldETF.Size = new System.Drawing.Size(452, 102);
+            this.chartGoldETF.Size = new System.Drawing.Size(452, 128);
             this.chartGoldETF.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chartGoldETF.TabIndex = 10;
             this.chartGoldETF.Text = "microChart2";
@@ -438,9 +453,9 @@
             this.superTabControlPanel4.Controls.Add(this.chartSilverETF);
             this.superTabControlPanel4.Controls.Add(this.gridSiverETF);
             this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 26);
+            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel4.Name = "superTabControlPanel4";
-            this.superTabControlPanel4.Size = new System.Drawing.Size(452, 253);
+            this.superTabControlPanel4.Size = new System.Drawing.Size(452, 279);
             this.superTabControlPanel4.TabIndex = 0;
             this.superTabControlPanel4.TabItem = this.superTabItem3;
             // 
@@ -486,7 +501,6 @@
             this.Controls.Add(this.superTabControl1);
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -494,6 +508,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SilverPriceExchange";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConvert_FormClosing);
+            this.Load += new System.EventHandler(this.frmConvert_Load);
             this.Resize += new System.EventHandler(this.frmConvert_Resize);
             this.cmsNotice.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
@@ -543,6 +558,7 @@
         private DevComponents.DotNetBar.MicroChart chartSilverETF;
         private DevComponents.DotNetBar.SuperGrid.SuperGridControl gridSiverETF;
         private DevComponents.DotNetBar.SuperTabItem superTabItem3;
+        private System.Windows.Forms.CheckBox cbxGoAgent;
     }
 }
 

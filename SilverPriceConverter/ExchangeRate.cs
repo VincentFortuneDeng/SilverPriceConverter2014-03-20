@@ -28,6 +28,14 @@ namespace SilverPriceConverter
         private string noticeListUrl = "http://www.pbc.gov.cn/publish/zhengcehuobisi/637/index.html";
         private string dealerCenterUrl = "http://www.safe.gov.cn/AppStructured/view/project_RMBQuery.action";
 
+        private bool enableProxy = false;
+        public bool EnableProxy
+        {
+            get { return enableProxy; }
+            set { enableProxy = value; }
+        }
+
+
         public RMBExchangeRate()
         {
 
@@ -76,7 +84,7 @@ namespace SilverPriceConverter
             return bytesEncode;
         }
 
-        public bool GetRMBExchangeRateFromDealerCenter(string fromDate,string toDate)
+        public bool GetRMBExchangeRateFromDealerCenter(string fromDate, string toDate)
         {
             try
             {
@@ -337,12 +345,34 @@ namespace SilverPriceConverter
             }
         }
 
+        private WebProxy getWebProxy()
+        {
+            WebProxy proxy = new WebProxy(); //定義一個網關對象
+            if (enableProxy)
+            {
+                proxy.Address = new Uri("http://127.0.0.1:8087"); //網關服務器:端口 
+                //proxy.Credentials = new NetworkCredential("f3210316", "6978233"); //用戶名,密碼 
+                //hwr.UseDefaultCredentials = true; //啟用網關認証 
+                //hwr.Proxy = proxy; //設置網關  
+            }
+
+            else
+            {
+                proxy = null;
+            }
+
+            return proxy;
+        }
+
         private string getWebContent(string url, string method, byte[] bytesParam)
         {
             string strResult = "";
             try
             {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+                //自动代理
+                request.Proxy = getWebProxy();
                 //声明一个HttpWebRequest请求 
                 request.Timeout = 30000;
                 //设置连接超时时间 
@@ -403,6 +433,9 @@ namespace SilverPriceConverter
             try
             {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+                //自动代理
+                request.Proxy = getWebProxy();
                 //声明一个HttpWebRequest请求 
                 request.Timeout = 30000;
                 //设置连接超时时间 
@@ -451,6 +484,9 @@ namespace SilverPriceConverter
             try
             {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+                //自动代理
+                request.Proxy = getWebProxy();
                 //声明一个HttpWebRequest请求 
                 request.Timeout = 30000;
                 //设置连接超时时间 

@@ -17,6 +17,7 @@ namespace SilverPriceConverter
     public partial class frmConvert : MetroForm
     {
         private RMBExchangeRate rmbexchangeRate = new RMBExchangeRate();
+
         public frmConvert()
         {
             InitializeComponent();
@@ -419,6 +420,16 @@ namespace SilverPriceConverter
                     //this.ResumeLayout();
                 }
             }
+        }
+
+        private void frmConvert_Load(object sender, EventArgs e)
+        {
+            rmbexchangeRate.EnableProxy = cbxGoAgent.Checked;
+        }
+
+        private void cbxGoAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            rmbexchangeRate.EnableProxy = cbxGoAgent.Checked;
         }
     }
 }
