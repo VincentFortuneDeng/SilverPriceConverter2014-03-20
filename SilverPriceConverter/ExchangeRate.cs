@@ -347,18 +347,15 @@ namespace SilverPriceConverter
 
         private WebProxy getWebProxy()
         {
-            WebProxy proxy = new WebProxy(); //定義一個網關對象
+            WebProxy proxy = null;//= new WebProxy(); //定義一個網關對象
             if (enableProxy)
             {
-                proxy.Address = new Uri("http://127.0.0.1:8087"); //網關服務器:端口 
+                proxy = new WebProxy("127.0.0.1", 8087);
+                //proxy.Address = new Uri("127.0.0.1",8087); //網關服務器:端口
+                //proxy.
                 //proxy.Credentials = new NetworkCredential("f3210316", "6978233"); //用戶名,密碼 
                 //hwr.UseDefaultCredentials = true; //啟用網關認証 
                 //hwr.Proxy = proxy; //設置網關  
-            }
-
-            else
-            {
-                proxy = null;
             }
 
             return proxy;
@@ -385,6 +382,9 @@ namespace SilverPriceConverter
                 request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
                 //request.Headers.Add("Accept-Encoding", "gzip,deflate,sdch");
                 request.Headers["Accept-Encoding"] = "gzip,deflate,sdch";
+
+                //req.AutomaticDecompression = DecompressionMethods.GZip;
+                request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
                 //request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
                 request.Headers["Accept-Language"] = "zh-CN,zh;q=0.8";
                 //request.Headers.Add("Cache-Control", "max-age=0");
@@ -448,6 +448,10 @@ namespace SilverPriceConverter
                 request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
                 //request.Headers.Add("Accept-Encoding", "gzip,deflate,sdch");
                 request.Headers["Accept-Encoding"] = "gzip,deflate,sdch";
+                
+                //req.AutomaticDecompression = DecompressionMethods.GZip;
+                request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+
                 //request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
                 request.Headers["Accept-Language"] = "zh-CN,zh;q=0.8";
                 //request.Headers.Add("Cache-Control", "max-age=0");
@@ -466,7 +470,7 @@ namespace SilverPriceConverter
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 //Stream streamReceive = response.GetResponseStream();
                 //Encoding encoding = Encoding.UTF8;
-                StreamReader streamReader = new StreamReader(response.GetResponseStream(), Encoding.UTF8);
+                StreamReader streamReader = new StreamReader(response.GetResponseStream(), Encoding.UTF8);//临时修改
                 strResult = streamReader.ReadToEnd();
                 return strResult;
             }
@@ -491,6 +495,11 @@ namespace SilverPriceConverter
                 request.Timeout = 30000;
                 //设置连接超时时间 
                 //request.Headers.Set("Pragma", "no-cache");
+
+                request.Headers["Accept-Encoding"] = "gzip,deflate,sdch";
+
+                //req.AutomaticDecompression = DecompressionMethods.GZip;
+                request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
                 //设置非缓存请求
                 HttpRequestCachePolicy noCachePolicy = new HttpRequestCachePolicy(HttpRequestCacheLevel.NoCacheNoStore);
                 request.CachePolicy = noCachePolicy;
