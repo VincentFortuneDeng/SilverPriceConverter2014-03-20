@@ -164,7 +164,7 @@
             this.cbxGoAgent.AutoSize = true;
             this.cbxGoAgent.BackColor = System.Drawing.Color.Transparent;
             this.cbxGoAgent.ForeColor = System.Drawing.Color.Black;
-            this.cbxGoAgent.Location = new System.Drawing.Point(88, 50);
+            this.cbxGoAgent.Location = new System.Drawing.Point(112, 50);
             this.cbxGoAgent.Name = "cbxGoAgent";
             this.cbxGoAgent.Size = new System.Drawing.Size(66, 16);
             this.cbxGoAgent.TabIndex = 19;
@@ -179,7 +179,7 @@
             this.cbxAuto.Checked = true;
             this.cbxAuto.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbxAuto.ForeColor = System.Drawing.Color.Black;
-            this.cbxAuto.Location = new System.Drawing.Point(88, 33);
+            this.cbxAuto.Location = new System.Drawing.Point(112, 33);
             this.cbxAuto.Name = "cbxAuto";
             this.cbxAuto.Size = new System.Drawing.Size(48, 16);
             this.cbxAuto.TabIndex = 18;
@@ -196,7 +196,7 @@
             0,
             0,
             131072});
-            this.txtUSD.Location = new System.Drawing.Point(158, 29);
+            this.txtUSD.Location = new System.Drawing.Point(182, 29);
             this.txtUSD.Name = "txtUSD";
             this.txtUSD.Size = new System.Drawing.Size(50, 21);
             this.txtUSD.TabIndex = 17;
@@ -211,7 +211,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.BackColor = System.Drawing.Color.White;
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(32, 54);
+            this.lblDate.Location = new System.Drawing.Point(41, 54);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(29, 12);
             this.lblDate.TabIndex = 16;
@@ -222,7 +222,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(320, 13);
+            this.label3.Location = new System.Drawing.Point(344, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 12);
             this.label3.TabIndex = 13;
@@ -233,7 +233,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(32, 12);
+            this.label2.Location = new System.Drawing.Point(41, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 14;
@@ -244,7 +244,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(158, 13);
+            this.label1.Location = new System.Drawing.Point(182, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 12);
             this.label1.TabIndex = 15;
@@ -254,7 +254,7 @@
             // 
             this.txtRMB.BackColor = System.Drawing.Color.White;
             this.txtRMB.ForeColor = System.Drawing.Color.Black;
-            this.txtRMB.Location = new System.Drawing.Point(320, 28);
+            this.txtRMB.Location = new System.Drawing.Point(344, 28);
             this.txtRMB.Name = "txtRMB";
             this.txtRMB.ReadOnly = true;
             this.txtRMB.Size = new System.Drawing.Size(50, 21);
@@ -266,7 +266,7 @@
             // 
             this.txtExchangeRate.BackColor = System.Drawing.Color.White;
             this.txtExchangeRate.ForeColor = System.Drawing.Color.Black;
-            this.txtExchangeRate.Location = new System.Drawing.Point(32, 28);
+            this.txtExchangeRate.Location = new System.Drawing.Point(41, 28);
             this.txtExchangeRate.Name = "txtExchangeRate";
             this.txtExchangeRate.Size = new System.Drawing.Size(50, 21);
             this.txtExchangeRate.TabIndex = 12;
@@ -279,7 +279,7 @@
             this.btnConvert.BackgroundImage = global::SilverPriceConverter.Properties.Resources.exchange;
             this.btnConvert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnConvert.ForeColor = System.Drawing.Color.Black;
-            this.btnConvert.Location = new System.Drawing.Point(239, 19);
+            this.btnConvert.Location = new System.Drawing.Point(263, 19);
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.Size = new System.Drawing.Size(48, 36);
             this.btnConvert.TabIndex = 10;
@@ -501,6 +501,7 @@
             this.Controls.Add(this.superTabControl1);
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
